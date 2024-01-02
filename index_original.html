@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>NTOLO_Rita portfolio website</title>
+  <link href="style.css" rel="stylesheet" type="text/css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+
+<body>
+
+
+  <div id="header">
+    <div class="container">
+      <nav>
+        <img src="images/LOGO.png" class="logo" />
+        <ul id="sidemenu">
+          <li><a href="#header">Home</a></li>
+          <li><a href="#About">About</a></li>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#portfolio">Portfolio</a></li>
+          <li><a href="#contact">Contact</a></li>
+          <i class="fas fa-times" onclick="closemenu()"></i>
+        </ul>
+        <i class="fas fa-bars" onclick="openmenu()"></i>
+      </nav>
+      <div class="header-text">
+        <p>Data Engineer</p>
+        <h1>Hi, I'm <span>Rita</span> <br>Ntolo From France.</h1>
+      </div>
+      <div id="profile">
+        <img src="images/photo.PNG" class="myProfile" />
+      </div>
+    </div>
+  </div>
+
+
+  <!------------about---------------->
+  <div id="about">
+    <div class="container">
+      <div class="row1">
+        <div class="about-col-1">
+          <img src="images/user.PNG" class="myUser" />
+
+        </div>
+        <div class="about-col-2">
+          <h1 class="subtitle">About Me</h1>
+          <p>I am a seasoned professional proficient in harnessing the power of Azure for cutting-edge data processing,
+            warehousing, ingestion, and real-time analysis. With a relentless commitment to precision and innovation, I
+            bring a wealth of experience to the table, ensuring seamless and efficient data solutions that propel
+            businesses forward.</p>
+
+          <div class="tab-titles">
+            <p class="tab-links active-link" onclick="opentab('skills')">Soft skills</p>
+            <p class="tab-links" onclick="opentab('experience')">Experience</p>
+            <p class="tab-links" onclick="opentab('education')">Education</p>
+          </div>
+
+          <div class="tab-contents active-tab" id="skills">
+            <ul>
+              <li><span>Communication Skills</span><br>
+                Improved collaboration, enhanced project understanding, and
+                effective knowledge sharing.</li>
+              <li><span>Problem-Solving and Critical Thinking</span><br>Efficient issue resolution, creative
+                problem-solving, and continuous improvement of data processes.</li>
+              <li><span>Team Collaboration</span><br>Enhanced teamwork, shared expertise, and the ability to work
+                seamlessly across different functions.</li>
+            </ul>
+          </div>
+
+          <div class="tab-contents" id="experience">
+            <ul>
+              <li><span>Data Analyst at Airbus Atlantic, Sep 2022 - Present</span><br>Machine Learning regression
+                modelling. <br> ETL pipeline development. <br> Process mining. <br> Project development and synthesis in
+                AGILE environment.
+              </li>
+              <li><span>Customer Service Agent at Tellis, Dec 2021 - June 2022</span><br>Analysis and database cleaning
+                (employer certificates – Pôle emploi).
+                <br> Sorting and consistency checks.
+              </li>
+            </ul>
+          </div>
+
+          <div class="tab-contents" id="education">
+            <ul>
+              <li><span>Sep 2021 - Sep 2024</span><br>Msc Computer Science engineering - 3IL Limoges, France.<br>Web
+                development (HTML, CSS, JavaScript). <br> Object Oriented Programming (Java, Python, C).
+              </li>
+
+              <li><span>Sep 2019 - Sep 2021</span><br>MPSI (Maths, Physics, Ingeniering sciences) preparatory schools.
+              </li>
+              <li><span>Sep 2018 - Sep 2019 </span><br>GCE Advanced Level (Mathematics, Physics and EComputer Science.
+              </li>
+
+            </ul>
+          </div>
+        </div>
+
+
+
+      </div>
+    </div>
+  </div>
+
+  <!------------services---------------->
+  <div id="services">
+    <div class="container">
+      <h1 class="subtitle">My services</h1>
+      <div class="services-list">
+        <div>
+          <i class="fa-solid fa-cloud" id="icon"></i>
+          <h2>Azure</h2>
+          <p>data processing, warehousing, ingestion and real-time analysis.</p>
+        </div>
+        <div>
+          <i class="fa-solid fa-stairs" id="icon"></i>
+          <h2>Airflow</h2>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam posuere,</p>
+        </div>
+        <div>
+          <i class="fa-solid fa-chart-line" id="icon"></i>
+          <h2>Visualisation</h2>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam posuere,</p>
+        </div>
+
+        <div>
+          <i class="fa-solid fa-code-compare" id="icon"></i>
+          <h2>CI/CD</h2>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam posuere,</p>
+        </div>
+
+        <div>
+          <i class="fa-brands fa-python" id="icon"></i>
+          <h2>Python development</h2>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam posuere,</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!------------portfolio---------------->
+  <div id="portfolio">
+    <div class="container">
+      <h1 class="subtitle">My Work</h1>
+      <div class="work-list">
+        <div class="work">
+          <img src="images/projets/stockmarket.jpg" id="work-img">
+          <div class="layer">
+            <h3>Real Time Stock Market Analysis</h3>
+            <p>This is a Data Ingestion pipeline utilizing Apache Kafka, AWS EC2, S3, Glue, and Athena.</p>
+            <a href="https://github.com/rita2002-max/stock-market-kafka-data-engineering-project"><i
+                class="fa-solid fa-arrow-up-right-from-square"></i></a>
+          </div>
+        </div>
+
+        <div class="work">
+          <img src="images/projets/streaming.jpg" id="work-img">
+          <div class="layer">
+            <h3>Spotify Pipeline</h3>
+            <p>An ETL that utilizes Airflow DAG to pull data from the Spotify API, log
+              the data, and insert it into a MongoDB database then the data is used for visualization.</p>
+            <a href="https://github.com/rita2002-max/Spotify_pipeline"><i
+                class="fa-solid fa-arrow-up-right-from-square"></i></a>
+          </div>
+        </div>
+      </div>
+
+      <a href="#" class="btn">See more</a>
+    </div>
+  </div>
+
+  <!------------portfolio---------------->
+  <div id="contact">
+    <div class="container">
+      <div class="row">
+        <h1 class="subtitle" id="contact-title">Contact Me</h1><br>
+      </div>
+      <div class="row">
+        <div class="social-icons">
+          <ul>
+            <li><a href="https://www.linkedin.com/in/rita-ntolo-923a85222/" target="_blank"><i
+                  class="fa-brands fa-linkedin"></i></a>
+            </li>
+            <li><a href="https://github.com/rita2002-max" target="_blank"><i class="fa-brands fa-github"></i></a></li>
+            <li><a href="mailto:owonorita@yahoo.fr" target="_blank"><i class="fa-solid fa-envelope"></i></a></li>
+            <li><a href="tel:+33758100685" target="_blank"><i class="fa-solid fa-phone"></i></a></li>
+          </ul>
+        </div>
+      </div>
+      <a href="documents/CV_NTOLO.pdf" download class="btn btn2">Download CV</a>
+    </div>
+
+    <div class="copyright">
+      <p>Copyright © Rita NTOLO, Made with <i class="fa-solid fa-heart"></i></p>
+    </div>
+  </div>
+
+
+  <script src="script.js"></script>
+  <script>
+    var sidemenu = document.getElementById("sidemenu");
+
+    function openmenu() {
+      sidemenu.style.right = "0";
+    }
+
+    function closemenu() {
+      sidemenu.style.right = "-200px";
+    }
+  </script>
+
+  <script src="https://replit.com/public/js/replit-badge-v2.js" theme="dark" position="bottom-right"></script>
+</body>
+
+</html>
